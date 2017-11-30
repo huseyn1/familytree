@@ -9,7 +9,7 @@ import javax.ws.rs.core.MediaType;
 import model.Family;
 import model.FamilyRespository;
 
-@Path("createfamily")
+@Path("family_insert")
 public class CreateFamilyService {
     
     FamilyRespository familRepo = new FamilyRespository();

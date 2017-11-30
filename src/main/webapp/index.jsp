@@ -14,7 +14,7 @@
         <!--input form -->
         <form id="family_insert" name="family_insert" action="family_insert" method="GET">
     		<div class="form-group">
-    			
+                    
                          <input type="number" name="familyid" id="replyNumber" min="1000" data-bind="value:replyNumber" placeholder="---enter id---"/>
     		</div>
     		<div class="form-group">

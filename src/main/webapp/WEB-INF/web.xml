@@ -11,16 +11,10 @@
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
-    <servlet>
-        <servlet-name>CreateFamily</servlet-name>
-        <servlet-class>controller.CreateFamilyServlet</servlet-class>
-    </servlet>
+   
     <servlet-mapping>
         <servlet-name>Jersey Web Application</servlet-name>
-        <url-pattern>/webapi/*</url-pattern>
+        <url-pattern>/familytree/*</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>CreateFamily</servlet-name>
-        <url-pattern>/family_insert</url-pattern>
-    </servlet-mapping>
+  
 </web-app>
