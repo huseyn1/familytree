@@ -1,11 +1,17 @@
 $(document).ready(function () {
-    $('#submit').click(function (){
-        var familyid = document.getElementById("familyid").value;
-        var family = document.getElementById("family").value;
+    $('#submit').click(function (e){
+       
+        var fid = $('#familyid').val();
+        var family = $('#family').val();
+        
         var JSONobject = {
-            "familyid":familyid,
+            "familyid":fid,
             "password":family
         };
+        
+        console.log(JSONobject);
+        
+        e.preventDefault();
         
     })
 })
