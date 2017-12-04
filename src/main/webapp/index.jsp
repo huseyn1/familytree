@@ -13,16 +13,19 @@
         <h1 align="center">Family tree</h1>
         <!--input form -->
         <form id="family_insert" name="family_insert" action="family_insert" method="GET">
-    		<div class="form-group">
-                    
-                         <input type="number" name="familyid" id="replyNumber" min="1000" data-bind="value:replyNumber" placeholder="---enter id---"/>
-    		</div>
-    		<div class="form-group">
-    		
-    			<input type="text" id="familyname" name="family" class="form-control" placeholder="---enter family---" >
-    		</div>
-    		 <button type="submit" id="submit" class="btn btn-primary">create family</button>
+            
+    	    <div class="form-group">
+            <input type="number" name="familyid" id="replyNumber" min="1000" data-bind="value:replyNumber" placeholder="---enter id---"/>
+    	    </div>
+            
+    	    <div class="form-group">
+    	    <input type="text" id="familyname" name="family" class="form-control" placeholder="---enter family---" >
+    	    </div>
+            
+            <button type="submit" id="submit" class="btn btn-primary">create family</button>
+            
     	</form>
+        
     	<button type="submit" class="btn btn-primary">show families</button>
         <button type="submit" class="btn btn-primary">delete families</button>
         <button type="submit" class="btn btn-primary">update families</button>
