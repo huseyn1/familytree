@@ -15,8 +15,8 @@ public class CreateFamilyService  {
     
     FamilyRespository familRepo = new FamilyRespository();
     
-    @GET
-    @Path("family/{familyid}/{family}")
+    @POST
+    @Path("family")
     @Produces(MediaType.APPLICATION_JSON)
     public void createFamily(@PathParam("familyid") int familyid, 
                              @PathParam("family") String family){

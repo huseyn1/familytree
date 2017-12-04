@@ -12,7 +12,7 @@
     <div class="container">
         <h1 align="center">Family tree</h1>
         <!--input form -->
-        <form id="family_insert" name="family_insert" action="#" method="GET">
+        <form id="family_insert" name="family_insert" action="#" method="POST">
             
     	    <div class="form-group">
             <input type="number" name="familyid" id="familyid" min="1000" data-bind="value:replyNumber" placeholder="---enter id---"/>
