@@ -10,10 +10,11 @@ $(document).ready(function () {
         };
         
         $.ajax({
-            url : 'http://localhost:8084/familytree/family_insert',
+            url : 'http://localhost:8084/familytree/family_insert/family',
             type: 'POST',
             dataType: 'json',
             data:JSONobject,
+            contentType: 'application/json',
             success: function (data) {
                console.log(data);  
             }
