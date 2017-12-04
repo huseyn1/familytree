@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    
+    $('#myTable').DataTable();
+    
     $('#submit').click(function (e){
        
         var fid = $('#familyid').val();
