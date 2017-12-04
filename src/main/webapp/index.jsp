@@ -33,42 +33,32 @@
         <table class="table" id="myTable">
             <thead>
                 <tr>
-                    <th>id</th>
                     <th>family id</th>
                     <th>families</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
                     <td>1001</td>
                     <td>Huseynovlar</td>
                 </tr>
                 <tr>
-                    <td>2</td>
                     <td>1002</td>
                     <td>Memmedovlar</td>
                 </tr>
                 <tr>
-                    <td>3</td>
                     <td>1003</td>
                     <td>Memmedovlar</td>
                 </tr>
                 <tr>
-                    <td>4</td>
                     <td>1004</td>
                     <td>Lazarevler</td>
                 </tr>
                 <tr>
-                    <td>5</td>
                     <td>1005</td>
                     <td>Eliyevler</td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>1002</td>
-                    <td>Memmedovlar</td>
-                </tr>
+          
             </tbody>
         </table>
 
