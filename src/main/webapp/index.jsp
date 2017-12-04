@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 
 </head>
@@ -15,11 +15,11 @@
         <form id="family_insert" name="family_insert" action="#" method="GET">
             
     	    <div class="form-group">
-            <input type="number" name="familyid" id="replyNumber" min="1000" data-bind="value:replyNumber" placeholder="---enter id---"/>
+            <input type="number" name="familyid" id="familyid" min="1000" data-bind="value:replyNumber" placeholder="---enter id---"/>
     	    </div>
             
     	    <div class="form-group">
-    	    <input type="text" id="familyname" name="family" class="form-control" placeholder="---enter family---" >
+    	    <input type="text" id="family" name="family" class="form-control" placeholder="---enter family---" >
     	    </div>
             
             <button type="submit" id="submit" class="btn btn-primary">create family</button>
@@ -80,7 +80,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script src="assets/js/familypost.js"></script>
+    <script src="assets/js/familyinsert.js"></script>
     <script>
         $(document).ready(function(){
           $('#myTable').DataTable();

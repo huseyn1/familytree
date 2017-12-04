@@ -9,6 +9,15 @@ $(document).ready(function () {
             "password":family
         };
         
+        $.ajax({
+            url : '',
+            type: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                
+            }
+        })
+        
         console.log(JSONobject);
         
         e.preventDefault();
