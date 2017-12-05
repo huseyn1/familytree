@@ -22,7 +22,7 @@ public class OracleDao {
     private static final String USERNAME="hr";
     private static final String PASSWORD="hr";
     
-    public void registrDriver(){
+    static {
         try {
             //Class.forName(DB_DRIVER_CLASSS);
             DriverManager.registerDriver(new OracleDriver());
