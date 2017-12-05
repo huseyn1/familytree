@@ -10,7 +10,7 @@ public class FamilyRespository {
      
      InsertFamilyDao dao = new InsertFamilyDao();
      dao.insertFamily(family);
-        System.out.println("family inserted");   
+     System.out.println("family inserted");   
     }
     
 }

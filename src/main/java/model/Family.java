@@ -62,7 +62,12 @@ public class Family {
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Family{" + "id=" + id + ", family=" + family + '}';
+    }
     
-    
+   
     
 }
