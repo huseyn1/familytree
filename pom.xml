@@ -53,11 +53,9 @@
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-json-binding</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.jslsolucoes</groupId>
-            <artifactId>ojdbc6</artifactId>
-            <version>11.2.0.1.0</version>
-        </dependency>
+        
+       
+        
         <!-- https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-core-asl -->
         <dependency>
              <groupId>org.codehaus.jackson</groupId>
@@ -69,6 +67,11 @@
             <artifactId>servlet-api</artifactId>
             <version>2.5</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.jslsolucoes</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0.1.0</version>
         </dependency>
     </dependencies>
     <properties>
