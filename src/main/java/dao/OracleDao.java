@@ -16,7 +16,7 @@ public class OracleDao {
     PreparedStatement ps = null;
     ResultSet rs = null;
     
-    private static final String DB_DRIVER_CLASSS="oracle.jdbc.driver.OracleDriver";
+    //private static final String DB_DRIVER_CLASSS="oracle.jdbc.driver.OracleDriver";
     private static final String URL="jdbc:oracle:thin:@localhost:1521:ORCL";
                                      
     private static final String USERNAME="hr";
