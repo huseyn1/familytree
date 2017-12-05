@@ -1,15 +1,28 @@
 $(document).ready(function () {
     
-    $('#myTable').DataTable();
-    
+      //show data
+       $('#myTable').dataTable({
+            "ajax": {
+                url:"http://localhost:8084/familytree/webapi/familyservice/showfamilies",
+                "dataSrc": function(json) {
+                    var obj = [];
+                    for (var t=0; t<json.length; t++) {
+                        obj.push([json[t]['id'],json[t]['family']]);
+                    }
+                    return obj;
+                }
+            }
+        });
+
+    //insert
     $('#submit').click(function (e){
        
         var fid = $('#familyid').val();
         var family = $('#family').val();
         
         var JSONobject = {
-	"id":1005,
-	"family":"Memmedovlar"
+	"id":fid,
+	"family":family
          }
         
         $.ajax({
@@ -20,11 +33,14 @@ $(document).ready(function () {
             contentType: 'application/json',
             success: function (data) {
                console.log(data);  
-               //alert('family succesfully inserted')
+               alert("family succesfully inserted");
             }
         })
         
         e.preventDefault();
         
     })
+    
+  
+    
 })

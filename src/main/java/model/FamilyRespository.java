@@ -1,7 +1,7 @@
 
 package model;
 
-import dao.InsertFamilyDao;
+import dao.FamilyDao;
 
 public class FamilyRespository {
 

@@ -26,9 +26,9 @@
             
     	</form>
         
-    	<button type="submit" class="btn btn-primary">show families</button>
-        <button type="submit" class="btn btn-primary">delete families</button>
-        <button type="submit" class="btn btn-primary">update families</button>
+    	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Go to family</button>
+        <button type="submit" class="btn btn-primary">Remove family</button>
+        <button type="submit" class="btn btn-primary">Update Family</button>
         <p></p>
         <table class="table" id="myTable">
             <thead>
@@ -38,26 +38,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1001</td>
-                    <td>Huseynovlar</td>
-                </tr>
-                <tr>
-                    <td>1002</td>
-                    <td>Memmedovlar</td>
-                </tr>
-                <tr>
-                    <td>1003</td>
-                    <td>Memmedovlar</td>
-                </tr>
-                <tr>
-                    <td>1004</td>
-                    <td>Lazarevler</td>
-                </tr>
-                <tr>
-                    <td>1005</td>
-                    <td>Eliyevler</td>
-                </tr>
+              
           
             </tbody>
         </table>
