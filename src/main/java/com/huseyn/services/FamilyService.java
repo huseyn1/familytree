@@ -10,20 +10,17 @@ import javax.ws.rs.core.MediaType;
 import model.Family;
 import model.FamilyRespository;
 
-@Path("family_insert")
-public class CreateFamilyService  {
+@Path("familyservice")
+public class FamilyService  {
     
     FamilyRespository familRepo = new FamilyRespository();
     
     @POST
-    @Path("family")
+    @Path("createfamily")
     @Produces(MediaType.APPLICATION_JSON)
-    public void createFamily(@PathParam("familyid") int familyid, 
-                             @PathParam("family") String family){
-        
-        Family families = new Family(familyid, family);
-        
-        familRepo.create(families);
-
+    public Family createFamily(Family family){
+        System.out.println(family);
+        //familRepo.create(family);
+        return family;
     }
 }
