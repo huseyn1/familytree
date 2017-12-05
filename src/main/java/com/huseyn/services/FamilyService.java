@@ -1,6 +1,7 @@
 
 package com.huseyn.services;
 
+import dao.InsertFamilyDao;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -19,14 +20,17 @@ public class FamilyService  {
         return "Got it!";
     }
     
-    FamilyRespository familRepo = new FamilyRespository();
+    //FamilyRespository familRepo = new FamilyRespository();
+    InsertFamilyDao familyDao = new InsertFamilyDao();
     
     @POST
     @Path("createfamily")
     @Produces(MediaType.APPLICATION_JSON)
-    public void createFamily(Family family){
+    public Family createFamily(Family family){
         System.out.println(family);
-        familRepo.create(family);
-       
+        //familRepo.create(family);
+        familyDao.insertFamily(family);
+        return family;
+        
     }
 }

@@ -8,15 +8,15 @@ $(document).ready(function () {
         var family = $('#family').val();
         
         var JSONobject = {
-            "familyid":fid,
-            "password":family
-        };
+	"id":1005,
+	"family":"Memmedovlar"
+         }
         
         $.ajax({
             url : 'http://localhost:8084/familytree/webapi/familyservice/createfamily',
             type: 'POST',
             dataType: 'json',
-            data:JSONobject,
+            data:JSON.stringify(JSONobject),
             contentType: 'application/json',
             success: function (data) {
                console.log(data);  
@@ -24,7 +24,6 @@ $(document).ready(function () {
             }
         })
         
-      
         e.preventDefault();
         
     })

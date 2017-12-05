@@ -42,9 +42,9 @@ public class OracleDao {
     
     public void closeConnection(){
         try {
-            rs.close();
-            ps.close();
-            conn.close();
+         if(rs!=null)   rs.close();
+           if(ps!=null)  ps.close();
+          if(conn!=null)  conn.close();
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
