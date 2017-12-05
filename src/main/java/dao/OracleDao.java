@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import oracle.jdbc.driver.OracleDriver;
 
 
 public class OracleDao {
@@ -16,18 +17,17 @@ public class OracleDao {
     PreparedStatement ps = null;
     ResultSet rs = null;
     
-    private static final String DB_DRIVER_CLASSS="oracle.jdbc.driver.OracleDriver";
+  //  private static final String DB_DRIVER_CLASSS="oracle.jdbc.driver.OracleDriver";
     private static final String URL="jdbc:oracle:thin:@localhost:1521:ORCL";                      
     private static final String USERNAME="hr";
     private static final String PASSWORD="hr";
     
     public void registrDriver(){
         try {
-            Class.forName(DB_DRIVER_CLASSS);
-           // DriverManager.registerDriver(new OracleDriver());
-        }
-        catch (ClassNotFoundException ex) {
-            Logger.getLogger(OracleDao.class.getName()).log(Level.SEVERE, null, ex);
+            //Class.forName(DB_DRIVER_CLASSS);
+            DriverManager.registerDriver(new OracleDriver());
+        } catch (SQLException ex) {
+           ex.printStackTrace();
         }
     }
     
