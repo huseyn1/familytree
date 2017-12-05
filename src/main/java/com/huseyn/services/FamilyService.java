@@ -13,14 +13,20 @@ import model.FamilyRespository;
 @Path("familyservice")
 public class FamilyService  {
     
+     @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getIt() {
+        return "Got it!";
+    }
+    
     FamilyRespository familRepo = new FamilyRespository();
     
     @POST
     @Path("createfamily")
     @Produces(MediaType.APPLICATION_JSON)
-    public Family createFamily(Family family){
+    public void createFamily(Family family){
         System.out.println(family);
-        //familRepo.create(family);
-        return family;
+        familRepo.create(family);
+       
     }
 }

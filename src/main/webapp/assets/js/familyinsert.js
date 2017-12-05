@@ -13,14 +13,14 @@ $(document).ready(function () {
         };
         
         $.ajax({
-            url : 'http://localhost:8084/familytree/family_insert/family',
+            url : 'http://localhost:8084/familytree/webapi/familyservice/createfamily',
             type: 'POST',
             dataType: 'json',
             data:JSONobject,
             contentType: 'application/json',
             success: function (data) {
                console.log(data);  
-               
+               //alert('family succesfully inserted')
             }
         })
         
