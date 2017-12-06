@@ -34,7 +34,6 @@ public class OracleDao {
     public void getConnection(){
         try {
             conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-            
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
