@@ -12,13 +12,109 @@
 <body>
     <div class="container">
         <% 
-        
         if (session.getAttribute("family")!=null){
         response.sendRedirect("family.jsp");
         }
         String family = (String)session.getAttribute("fname");
         %>
         <h1 align="center">Welcome to <%= family %></h1>
+        
+             <!-- INSERT HUMAN -->
+  <button type="button" id="login" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal0">INSERT HUMAN</button>
+  
+   <!-- Modal -->
+  <div class="modal fade" id="myModal0" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">TYPE ID AND FAMILY</h4>
+        </div>
+        <div class="modal-body">
+             <!--input form -->
+        <form id="family_insert" name="family_insert" action="#" method="POST">
+            
+    	    <div class="form-group">
+            <input type="number" name="familyid" id="familyid" min="1000" data-bind="value:replyNumber" placeholder="---enter id---"/>
+    	    </div>
+            
+    	    <div class="form-group">
+    	    <input type="text" id="family" name="family" class="form-control" placeholder="---enter family---" >
+    	    </div>
+            
+            <button type="submit" id="submit" class="btn btn-primary">create family</button>
+            
+    	</form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+  <!-- end of Trigger the modal with a button -->
+        
+         <!-- UPDATE HUMAN -->
+  <button type="button" id="login" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">UPDATE HUMAN</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">TYPE ID AND FAMILY</h4>
+        </div>
+        <div class="modal-body">
+            <form id="family_login" name="family_login" action="loginservlet" method="POST">
+                
+            <div class="form-group">
+            <input type="number" name="loginid" id="loginid" placeholder="---enter id---"/>
+    	    </div>
+            
+    	    <div class="form-group">
+    	    <input type="text" id="family" name="family" class="form-control" placeholder="---enter family---" >
+    	    </div>
+            
+            <button type="submit" id="login" class="btn btn-primary">Login Family</button>
+                
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+  <!-- end of Trigger the modal with a button -->
+  
+       
+        <p></p>
+        <table class="table" id="myTable">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>surname</th>
+                    <th>age</th>
+                    <th>father</th>
+                    <th>mother</th>
+                    <th>gender</th>
+                    <th>life status</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+              
+          
+            </tbody>
+        </table>
        
     </div>
  

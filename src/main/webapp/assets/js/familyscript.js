@@ -63,9 +63,27 @@ $(document).ready(function () {
     
     
     $('#family_update').submit(function (e){
-       var fid = $('#removeid').val(); 
+       var fid = $('#updateid').val();
+       var fname = $('#updatefamily').val();
         
+         var JSONobject = {
+	"id":fid,
+	"family":fname
+         }
+         
+          $.ajax({
+            url : 'http://localhost:8084/familytree/webapi/familyservice/updatefamily',
+            type: 'PUT',
+            dataType: 'json',
+            data:JSON.stringify(JSONobject),
+            contentType: 'application/json',
+            success: function (data) {
+               console.log(data);  
+               alert("family succesfully updated");
+            }
+        })
         
+         e.preventDefault();
     })
   
     

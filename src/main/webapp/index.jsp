@@ -146,7 +146,7 @@
         </div>
         <div class="modal-body">
             
-            <form id="family_update" name="family_update" action="#" >
+            <form id="family_update" name="family_update" action="#" Method="GET">
                 
             <div class="form-group">
             <input type="number" name="updateid" id="updateid" placeholder="---enter id---"/>
