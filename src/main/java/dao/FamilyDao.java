@@ -102,4 +102,27 @@ public class FamilyDao extends OracleDao implements FamilyMethods{
      
     }
     
+    
+    @Override
+    public Family loginFamily(int id,String family){
+        Family f = new Family();
+     
+        String sql = "select fid,fname from families where fid=? and fname=?";
+        try {
+            getConnection();
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.setString(2, family);
+            rs = ps.executeQuery();
+            rs.next();
+            f.setId(rs.getInt("fid"));
+            f.setFamily(rs.getString("fname"));
+            
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+       return f;
+    }
+    
 }

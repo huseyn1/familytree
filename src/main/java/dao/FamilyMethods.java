@@ -10,4 +10,5 @@ public interface FamilyMethods {
     public void deleteFamily(int id);
     public Family getFamily(int id);
     public void updateFamily(Family f);
+    public Family loginFamily(int id,String family);
 }

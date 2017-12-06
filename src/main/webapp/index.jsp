@@ -10,9 +10,28 @@
 </head>
 
 <body>
+    
+    
     <div class="container">
         <h1 align="center">Family tree</h1>
-        <!--input form -->
+       
+        
+    	
+         <!-- Create Family-->
+  <button type="button" id="login" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal0">Create Family</button>
+  
+   <!-- Modal -->
+  <div class="modal fade" id="myModal0" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">TYPE ID AND FAMILY</h4>
+        </div>
+        <div class="modal-body">
+             <!--input form -->
         <form id="family_insert" name="family_insert" action="#" method="POST">
             
     	    <div class="form-group">
@@ -26,11 +45,17 @@
             <button type="submit" id="submit" class="btn btn-primary">create family</button>
             
     	</form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+  <!-- end of Trigger the modal with a button -->
         
-    	
-        
-        
-         <!-- Trigger the modal with a button -->
+         <!-- Go to Family-->
   <button type="button" id="login" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Go to family</button>
 
   <!-- Modal -->
@@ -44,7 +69,7 @@
           <h4 class="modal-title">TYPE ID AND FAMILY</h4>
         </div>
         <div class="modal-body">
-            <form id="family_login" name="family_login" action="#" method="POST">
+            <form id="family_login" name="family_login" action="loginservlet" method="POST">
                 
             <div class="form-group">
             <input type="number" name="loginid" id="loginid" placeholder="---enter id---"/>
@@ -54,7 +79,7 @@
     	    <input type="text" id="family" name="family" class="form-control" placeholder="---enter family---" >
     	    </div>
             
-            <button type="submit" id="submit" class="btn btn-primary">Login Family</button>
+            <button type="submit" id="login" class="btn btn-primary">Login Family</button>
                 
             </form>
         </div>
@@ -68,30 +93,32 @@
   <!-- end of Trigger the modal with a button -->
   
   
-   <!-- Trigger the modal with a button -->
-  <button type="button" id="login" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Remove family</button>
+   <!-- Remove -->
+  <button type="button" id="remove" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Remove family</button>
 
   <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal fade" id="myModal1" role="dialog">
     <div class="modal-dialog">
     
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">TYPE ID </h4>
+          <h4 class="modal-title">TYPE_ID </h4>
         </div>
         <div class="modal-body">
-            <form id="family_login" name="family_login" action="#" method="POST">
+            
+            <form id="family_remove" name="family_remove" method="DELETE" >
                 
             <div class="form-group">
-            <input type="number" name="loginid" id="loginid" placeholder="---enter id---"/>
+            <input type="number" name="removeid" id="removeid" placeholder="---enter id---"/>
     	    </div>
             
             
-            <button type="submit" id="submit" class="btn btn-primary">Remove Family</button>
+            <button type="submit" id="remove" class="btn btn-primary">Remove Family</button>
                 
             </form>
+            
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -104,11 +131,11 @@
   
   
   
-   <!-- Trigger the modal with a button -->
-  <button type="button" id="login" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Update Family</button>
+   <!-- Update -->
+  <button type="button" id="login" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Update Family</button>
 
   <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal fade" id="myModal2" role="dialog">
     <div class="modal-dialog">
     
       <!-- Modal content-->
@@ -118,19 +145,21 @@
           <h4 class="modal-title">TYPE ID AND FAMILY</h4>
         </div>
         <div class="modal-body">
-            <form id="family_login" name="family_login" action="#" method="POST">
+            
+            <form id="family_update" name="family_update" action="#" >
                 
             <div class="form-group">
-            <input type="number" name="loginid" id="loginid" placeholder="---enter id---"/>
+            <input type="number" name="updateid" id="updateid" placeholder="---enter id---"/>
     	    </div>
             
     	    <div class="form-group">
-    	    <input type="text" id="family" name="family" class="form-control" placeholder="---enter family---" >
+    	    <input type="text" id="updatefamily" name="updatefamily" class="form-control" placeholder="---enter family---" >
     	    </div>
             
-            <button type="submit" id="submit" class="btn btn-primary">Update Family</button>
+            <button type="submit" id="update" class="btn btn-primary">Update Family</button>
                 
             </form>
+            
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

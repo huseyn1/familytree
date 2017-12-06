@@ -39,6 +39,25 @@ $(document).ready(function () {
         
         e.preventDefault();
         
+    });
+    
+    //remove
+    $('#remove').click(function (e){
+        
+        var fid = $('#removeid').val();
+        
+        $.ajax({
+            url : 'http://localhost:8084/familytree/webapi/familyservice/deletefamily/'+fid,
+            type: 'DELETE',
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (data) {
+               console.log(data);  
+               alert("family succesfully removed");
+            }
+        })
+        
+       e.preventDefault(); 
     })
     
   
