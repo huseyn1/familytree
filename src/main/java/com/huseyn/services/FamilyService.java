@@ -3,6 +3,7 @@ package com.huseyn.services;
 
 import dao.FamilyDao;
 import java.util.List;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -35,4 +36,14 @@ public class FamilyService  {
         return family;
         
     }
+    
+//    @DELETE
+//    @Path("deletefamily/{id}")
+//    @Produces (MediaType.APPLICATION_JSON)
+//    public Family deleteFamily(@PathParam("id") int id){
+//        Family family = new Family();
+//        if (family.getId()!=0)
+//        familyDao.deleteFamily(id);
+//        return family;
+//    }
 }

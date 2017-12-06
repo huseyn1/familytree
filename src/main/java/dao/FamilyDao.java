@@ -42,11 +42,28 @@ public class FamilyDao extends OracleDao implements FamilyInserting{
             f.setId(rs.getInt("fid"));
             f.setFamily(rs.getString("fname"));
             familys.add(f);
+            closeConnection();
             }
         } catch (SQLException ex) {
             ex.printStackTrace();
+            closeConnection();
         }
         return familys;
+    }
+
+    public void deleteFamily(int id) {
+        try {
+            String sql = "delete from families where fid=?";
+            getConnection();
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.executeUpdate();
+            closeConnection();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            closeConnection();
+        }
+        
     }
     
 }
