@@ -108,7 +108,7 @@
         </div>
         <div class="modal-body">
             
-            <form id="family_remove" name="family_remove" method="DELETE" >
+            <form id="family_remove" name="family_remove" Method="POST">
                 
             <div class="form-group">
             <input type="number" name="removeid" id="removeid" placeholder="---enter id---"/>
@@ -194,7 +194,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    <script src="assets/js/familyinsert.js"></script>
+    <script src="assets/js/familyscript.js"></script>
    
 </body>
 </html>

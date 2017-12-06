@@ -42,7 +42,7 @@ $(document).ready(function () {
     });
     
     //remove
-    $('#remove').click(function (e){
+    $('#family_remove').submit(function (e){
         
         var fid = $('#removeid').val();
         
@@ -60,6 +60,13 @@ $(document).ready(function () {
        e.preventDefault(); 
     })
     
+    
+    
+    $('#family_update').submit(function (e){
+       var fid = $('#removeid').val(); 
+        
+        
+    })
   
     
 })
