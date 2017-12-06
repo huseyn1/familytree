@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 
 </head>
+
 <body>
     <div class="container">
         <h1 align="center">Family tree</h1>
@@ -26,9 +27,122 @@
             
     	</form>
         
-    	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Go to family</button>
-        <button type="submit" class="btn btn-primary">Remove family</button>
-        <button type="submit" class="btn btn-primary">Update Family</button>
+    	
+        
+        
+         <!-- Trigger the modal with a button -->
+  <button type="button" id="login" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Go to family</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">TYPE ID AND FAMILY</h4>
+        </div>
+        <div class="modal-body">
+            <form id="family_login" name="family_login" action="#" method="POST">
+                
+            <div class="form-group">
+            <input type="number" name="loginid" id="loginid" placeholder="---enter id---"/>
+    	    </div>
+            
+    	    <div class="form-group">
+    	    <input type="text" id="family" name="family" class="form-control" placeholder="---enter family---" >
+    	    </div>
+            
+            <button type="submit" id="submit" class="btn btn-primary">Login Family</button>
+                
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+  <!-- end of Trigger the modal with a button -->
+  
+  
+   <!-- Trigger the modal with a button -->
+  <button type="button" id="login" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Remove family</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">TYPE ID </h4>
+        </div>
+        <div class="modal-body">
+            <form id="family_login" name="family_login" action="#" method="POST">
+                
+            <div class="form-group">
+            <input type="number" name="loginid" id="loginid" placeholder="---enter id---"/>
+    	    </div>
+            
+            
+            <button type="submit" id="submit" class="btn btn-primary">Remove Family</button>
+                
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+  <!-- end of Trigger the modal with a button -->
+  
+  
+  
+   <!-- Trigger the modal with a button -->
+  <button type="button" id="login" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Update Family</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">TYPE ID AND FAMILY</h4>
+        </div>
+        <div class="modal-body">
+            <form id="family_login" name="family_login" action="#" method="POST">
+                
+            <div class="form-group">
+            <input type="number" name="loginid" id="loginid" placeholder="---enter id---"/>
+    	    </div>
+            
+    	    <div class="form-group">
+    	    <input type="text" id="family" name="family" class="form-control" placeholder="---enter family---" >
+    	    </div>
+            
+            <button type="submit" id="submit" class="btn btn-primary">Update Family</button>
+                
+            </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+  <!-- end of Trigger the modal with a button -->
+  
+  
+       
         <p></p>
         <table class="table" id="myTable">
             <thead>
