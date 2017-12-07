@@ -30,18 +30,26 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">TYPE ID AND FAMILY</h4>
+          <h4 class="modal-title">TYPE HUMAN DATA</h4>
         </div>
         <div class="modal-body">
              <!--input form -->
         <form id="family_insert" name="family_insert" action="#" method="POST">
             
     	    <div class="form-group">
-            <input type="number" name="familyid" id="familyid" min="1000" data-bind="value:replyNumber" placeholder="---enter id---"/>
+            <input type="number" name="familyid" id="familyid" min="0" data-bind="value:replyNumber" placeholder="---enter id---"/>
     	    </div>
             
     	    <div class="form-group">
     	    <input type="text" id="family" name="family" class="form-control" placeholder="---enter family---" >
+    	    </div>
+            
+            <div class="form-group">
+    	    <input type="text" id="family" name="family" class="form-control" placeholder="---enter family---" >
+    	    </div>
+            
+             <div class="form-group">
+            <input type="number" name="familyid" id="familyid" min="0" max="150" data-bind="value:replyNumber" placeholder="---enter age---"/>
     	    </div>
             
             <button type="submit" id="submit" class="btn btn-primary">create family</button>
@@ -124,7 +132,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-    
+    <script src="assets/js/humanscript.js"></script>
    
 </body>
 </html>
