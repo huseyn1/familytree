@@ -34,6 +34,7 @@ public class LoginServlet extends HttpServlet {
         if(f!=null){
             HttpSession session = request.getSession();
             session.setAttribute("fname", f.getFamily());
+            session.setAttribute("fid", f.getId());
         response.sendRedirect("family.jsp");
         }
         else{
