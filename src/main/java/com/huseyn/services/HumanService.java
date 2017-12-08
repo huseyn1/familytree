@@ -28,32 +28,31 @@ public class HumanService {
     @Path("showhuman")
     @Produces(MediaType.APPLICATION_JSON)
     public List<RelatedHuman> getHumans( @Context HttpServletRequest request){
-    HttpSession session = request.getSession();
-    int fId = (int)session.getAttribute("fid"); 
-    return humanDao.getHumans(fId);
+     HttpSession session = request.getSession();
+     int fId = (int)session.getAttribute("fid"); 
+     return humanDao.getHumans(fId);
     }
     
     @POST
     @Path("createhuman")
     @Produces(MediaType.APPLICATION_JSON)
     public Human createHuman(Human human){
-    humanDao.insertHuman(human);
-    return human;
+     humanDao.insertHuman(human);
+     return human;
     }
     
     @DELETE
     @Path("deletehuman/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Human deleteHuman(@PathParam("id") int id){
-    return null;
+     return null;
     }
     
     @PUT
     @Path("updatehuman")
     @Produces(MediaType.APPLICATION_JSON)
     public Human updateHuman(Human human){
-    
-    return human;
+     return human;
     }
     
     @POST

@@ -30,7 +30,7 @@ public class FamilyService  {
     @Produces(MediaType.APPLICATION_JSON)
     public Family getFamily(@PathParam("id") int id){
     
-    return familyDao.getFamily(id);
+     return familyDao.getFamily(id);
         
     }
     
@@ -62,10 +62,9 @@ public class FamilyService  {
     public Family updateFamily(Family f){
         
         if (familyDao.getFamily(f.getId()).getId()==0){
-        familyDao.insertFamily(f);
-        }
-        else{
-        familyDao.updateFamily(f);
+         familyDao.insertFamily(f);
+        } else {
+         familyDao.updateFamily(f);
         }
         return f;
       
