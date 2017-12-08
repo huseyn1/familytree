@@ -10,7 +10,7 @@ $(document).ready(function () {
                         obj.push([json[t]['id'],json[t]['family']]);
                     }
                     return obj;
-                }
+                }lo
             }
         });
 
