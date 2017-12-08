@@ -24,22 +24,13 @@ public class HumanService {
     
     HumanDao humanDao = new HumanDao();
     
-     
-     @Context
-     HttpServletRequest request;
-     HttpSession session = request.getSession();
-     int fid = (int) session.getAttribute("fid");
-    
-     public void show(){
-         System.out.println(fid);
-     }
-     
-    
     @GET
     @Path("showhuman")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<RelatedHuman> getHumans(){
-    return humanDao.getHumans(fid);
+    public List<RelatedHuman> getHumans( @Context HttpServletRequest request){
+    HttpSession session = request.getSession();
+    int fId = (int)session.getAttribute("fid"); 
+    return humanDao.getHumans(fId);
     }
     
     @POST
